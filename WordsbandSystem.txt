@@ -1,0 +1,36 @@
+内容物
+
+・AutoRestartフォルダ
+Arduinoスケッチファイルが更新されると，自動的にスケッチを再起動するプログラム
+
+・wordsbandSketchフォルダ
+Arduinoスケッチファイル群
+※ フォントデータなど，公開できない部分やプログラムとして複雑になってしまう部分を抜いて，
+　おおまかにまとめた擬似コードです．
+　そのままでは実行できませんが，Arduino環境からLinuxの機能にアクセスしている部分など，
+　面白いと思えるエッセンスを残しました．
+　
+
+--- 詳細 ----------
+[AutoRestartフォルダ]
+
+- AutoSketchReLoad.sh
+　Arduinoのスケッチファイル更新を監視するプログラム
+　
+　ネットワーク経由でホームフォルダにsyncされるファイルを監視し，
+　更新があったら実行用フォルダにコピーしてスケッチを再起動する
+
+- autoRestart.sh
+　スケッチファイルの更新監視プログラムをデーモンとして起動するためのスクリプト
+
+
+[wordsbandSketchフォルダ]
+
+- wordsbandSketch.ino
+　メインのArduinoスケッチ
+
+- logo.h
+　aircordロゴ表示用データ
+
+- systemFunctions.h
+　Linuxシステムから情報を得る関数群
